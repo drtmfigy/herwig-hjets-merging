@@ -1,0 +1,144 @@
+# BEGIN PLOT
+Scale=1000.0
+DrawOnly=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RightMargin=0.5
+RatioPlotReference=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+#RatioPlot=1
+LogY=1
+RatioPlotYMax=1.2
+RatioPlotYLabel=Ratio
+#LegendOnly=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+LegendAlign=r
+YLabel=$ \sigma_{\text{fid}}$ (fb)
+Legend=1
+RatioPlot=4
+MainPlotSelection={"Selection":[1,2,3,4,5,6,7,8]}
+RatioPlots={"RatioPlotYLabel":"","Selection":[1,2]};{"RatioPlotYLabel":"","Selection":[3,4]};{"RatioPlotYLabel":"","Selection":[5,6]};{"RatioPlotYLabel":"","Selection":[7,8]}
+RatioPlotSameStyle=1
+RatioPlotYMin=0.8
+# END PLOT
+
+
+# BEGIN SPECIAL /MC_H2JETS_04_LOOSE/XS
+\rput[tl](0.05,0.75){\parbox{5cm}{\textcolor{gray}{{\bf Herwig 7.2.0} \\ HJETS/ColorFull}}}
+# END SPECIAL
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=orange
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=orange
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2*,3*,4)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.913566e+00	8.163400e-02	5.163800e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=red
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=red
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-N3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2*,3*,4)-vbfnlo
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.884037e+00	1.589300e-01	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=blue
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=blue
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2*,3,4)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.902334e+00	7.810100e-02	6.286600e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=cyan
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=cyan
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-N2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2*,3,4)-vbfnlo
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.813241e+00	9.381600e-02	7.130500e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=yellow
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=yellow
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2,3,4)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.897447e+00	2.085500e-02	0.000000e+00
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=green
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=green
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-4-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2,3,4)-vbfnlo
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.845091e+00	2.577700e-02	3.921000e-03
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=purple
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=purple
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2,3)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.894220e+00	2.003300e-02	1.609000e-03
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+ErrorBandColor=violet
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=violet
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-vbfnlo/H-2-3-25gev-vbfnlo-combine.yoda/MC_H2JETS_04_LOOSE/XS
+RatioPlotSameStyle=1
+Title=h(2,3)-vbfnlo
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	1.000000e+00	1.820394e+00	0.000000e+00	2.947700e-02
+# END HISTO1D
+

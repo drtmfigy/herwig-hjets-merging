@@ -1,0 +1,263 @@
+# BEGIN PLOT
+Scale=1000.0
+DrawOnly=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H3Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H2Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RightMargin=0.5
+RatioPlotReference=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+#RatioPlot=1
+LogY=1
+RatioPlotYMax=1.4
+RatioPlotYLabel=Ratio
+#LegendOnly=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H3Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H2Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+XLabel=$\theta_{j2,j3}$ $(rad/\pi)$
+LegendAlign=r
+YLabel=$\text{d} \sigma/ \text{d} \theta_{j2,j3}$ (fb)
+Legend=0
+RatioPlot=6
+MainPlotSelection={"Selection":[1,2,3,4,5,6,7]}
+RatioPlots={"RatioPlotYLabel":"","Selection":[1,2]};{"RatioPlotYLabel":"","Selection":[1,3]};{"RatioPlotYLabel":"","Selection":[1,4]};{"RatioPlotYLabel":"","Selection":[1,5]};{"RatioPlotYLabel":"","Selection":[1,6]};{"RatioPlotYLabel":"","Selection":[1,7]}
+RatioPlotSameStyle=1
+RatioPlotYMin=0.6
+# END PLOT
+
+
+# BEGIN SPECIAL /MC_H2JETS_07_LOOSE/j2j3_pullangle
+\rput[tl](0.05,0.75){\parbox{5cm}{\textcolor{gray}{{\bf Herwig 7.2.0} \\ HJETS/ColorFull}}}
+# END SPECIAL
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+ErrorBandColor=orange
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=orange
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-N3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RatioPlotSameStyle=1
+Title=h(2*,3*,4)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	5.000000e-02	4.820394e-01	2.674860e-02	1.983100e-02
+5.000000e-02	1.000000e-01	5.224908e-01	6.084900e-02	0.000000e+00
+1.000000e-01	1.500000e-01	4.822004e-01	1.785820e-02	3.143440e-02
+1.500000e-01	2.000000e-01	4.871322e-01	5.045640e-02	1.543400e-02
+2.000000e-01	2.500000e-01	4.526652e-01	1.688860e-02	3.349500e-02
+2.500000e-01	3.000000e-01	4.244360e-01	2.633740e-02	5.549760e-02
+3.000000e-01	3.500000e-01	4.309798e-01	5.447840e-02	3.139800e-02
+3.500000e-01	4.000000e-01	4.201876e-01	3.487100e-02	3.034200e-02
+4.000000e-01	4.500000e-01	4.276652e-01	4.289180e-02	3.352460e-02
+4.500000e-01	5.000000e-01	4.395144e-01	4.220000e-02	2.672760e-02
+5.000000e-01	5.500000e-01	4.390058e-01	3.900040e-02	2.542220e-02
+5.500000e-01	6.000000e-01	4.249760e-01	4.517240e-02	3.836160e-02
+6.000000e-01	6.500000e-01	4.082306e-01	3.029320e-02	4.614960e-02
+6.500000e-01	7.000000e-01	4.262732e-01	4.477560e-02	4.515780e-02
+7.000000e-01	7.500000e-01	4.226324e-01	2.734880e-02	1.924820e-02
+7.500000e-01	8.000000e-01	4.658798e-01	3.147880e-02	1.975460e-02
+8.000000e-01	8.500000e-01	4.650160e-01	1.977540e-02	3.708100e-02
+8.500000e-01	9.000000e-01	4.771432e-01	3.816420e-02	3.300580e-02
+9.000000e-01	9.500000e-01	4.915442e-01	3.788320e-02	9.034400e-03
+9.500000e-01	1.000000e+00	4.827096e-01	1.996800e-02	4.087060e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+ErrorBandColor=blue
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=blue
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RatioPlotSameStyle=1
+Title=h(2*,3,4)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	5.000000e-02	4.716976e-01	4.146120e-02	6.310940e-02
+5.000000e-02	1.000000e-01	4.680874e-01	4.400960e-02	6.013520e-02
+1.000000e-01	1.500000e-01	4.677906e-01	4.310840e-02	5.279860e-02
+1.500000e-01	2.000000e-01	4.652086e-01	4.465960e-02	5.223060e-02
+2.000000e-01	2.500000e-01	4.468350e-01	4.827260e-02	5.670420e-02
+2.500000e-01	3.000000e-01	4.242020e-01	4.343360e-02	5.812720e-02
+3.000000e-01	3.500000e-01	4.170092e-01	5.997880e-02	6.092120e-02
+3.500000e-01	4.000000e-01	4.118238e-01	6.009040e-02	5.860540e-02
+4.000000e-01	4.500000e-01	4.132018e-01	5.021760e-02	6.288900e-02
+4.500000e-01	5.000000e-01	4.204134e-01	4.914480e-02	5.288840e-02
+5.000000e-01	5.500000e-01	4.244136e-01	5.263760e-02	5.738760e-02
+5.500000e-01	6.000000e-01	4.165478e-01	5.678460e-02	5.843740e-02
+6.000000e-01	6.500000e-01	4.086168e-01	6.003820e-02	6.671580e-02
+6.500000e-01	7.000000e-01	4.120484e-01	6.202220e-02	6.124640e-02
+7.000000e-01	7.500000e-01	4.271886e-01	5.203400e-02	5.387820e-02
+7.500000e-01	8.000000e-01	4.443006e-01	4.455000e-02	6.152400e-02
+8.000000e-01	8.500000e-01	4.612422e-01	4.178380e-02	5.537240e-02
+8.500000e-01	9.000000e-01	4.608590e-01	3.788980e-02	6.606400e-02
+9.000000e-01	9.500000e-01	4.697490e-01	4.674160e-02	5.426360e-02
+9.500000e-01	1.000000e+00	4.701536e-01	4.672780e-02	5.463640e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+ErrorBandColor=yellow
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=yellow
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-4-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RatioPlotSameStyle=1
+Title=h(2,3,4)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	5.000000e-02	4.672714e-01	4.846000e-02	6.614220e-02
+5.000000e-02	1.000000e-01	4.637198e-01	5.387300e-02	6.034280e-02
+1.000000e-01	1.500000e-01	4.614884e-01	5.349440e-02	5.984660e-02
+1.500000e-01	2.000000e-01	4.573702e-01	5.048880e-02	5.725520e-02
+2.000000e-01	2.500000e-01	4.400426e-01	5.013480e-02	5.918800e-02
+2.500000e-01	3.000000e-01	4.162878e-01	5.150880e-02	6.598600e-02
+3.000000e-01	3.500000e-01	4.028770e-01	6.126240e-02	6.634960e-02
+3.500000e-01	4.000000e-01	3.997904e-01	6.140740e-02	6.826900e-02
+4.000000e-01	4.500000e-01	4.025880e-01	5.323920e-02	6.677240e-02
+4.500000e-01	5.000000e-01	4.141414e-01	5.355300e-02	6.628400e-02
+5.000000e-01	5.500000e-01	4.145286e-01	5.435860e-02	6.411820e-02
+5.500000e-01	6.000000e-01	4.055358e-01	5.456340e-02	6.903400e-02
+6.000000e-01	6.500000e-01	4.020282e-01	6.249180e-02	7.027100e-02
+6.500000e-01	7.000000e-01	4.047282e-01	5.862380e-02	6.749780e-02
+7.000000e-01	7.500000e-01	4.215478e-01	5.819060e-02	6.438060e-02
+7.500000e-01	8.000000e-01	4.441946e-01	5.329560e-02	6.286560e-02
+8.000000e-01	8.500000e-01	4.570778e-01	4.921060e-02	6.604120e-02
+8.500000e-01	9.000000e-01	4.599306e-01	4.877400e-02	6.699020e-02
+9.000000e-01	9.500000e-01	4.725782e-01	5.984860e-02	5.523060e-02
+9.500000e-01	1.000000e+00	4.666646e-01	4.917520e-02	6.960900e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+ErrorBandColor=green
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=green
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-N2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RatioPlotSameStyle=1
+Title=h(2*,3)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	5.000000e-02	4.660432e-01	4.316760e-02	5.302280e-02
+5.000000e-02	1.000000e-01	4.594640e-01	2.329460e-02	5.918800e-02
+1.000000e-01	1.500000e-01	4.583662e-01	3.850440e-02	5.021980e-02
+1.500000e-01	2.000000e-01	4.543936e-01	4.090320e-02	4.832220e-02
+2.000000e-01	2.500000e-01	4.379198e-01	4.419600e-02	6.089240e-02
+2.500000e-01	3.000000e-01	4.164408e-01	4.833720e-02	5.486400e-02
+3.000000e-01	3.500000e-01	4.041120e-01	5.563420e-02	5.791080e-02
+3.500000e-01	4.000000e-01	3.982700e-01	5.503820e-02	6.143560e-02
+4.000000e-01	4.500000e-01	4.037732e-01	4.999480e-02	5.692360e-02
+4.500000e-01	5.000000e-01	4.114462e-01	4.295180e-02	5.976580e-02
+5.000000e-01	5.500000e-01	4.116280e-01	4.796080e-02	5.828160e-02
+5.500000e-01	6.000000e-01	4.030168e-01	4.564540e-02	6.293440e-02
+6.000000e-01	6.500000e-01	3.983456e-01	5.105240e-02	6.290980e-02
+6.500000e-01	7.000000e-01	4.013722e-01	5.127660e-02	6.141000e-02
+7.000000e-01	7.500000e-01	4.162066e-01	5.055600e-02	5.959740e-02
+7.500000e-01	8.000000e-01	4.361104e-01	4.095880e-02	5.537960e-02
+8.000000e-01	8.500000e-01	4.501088e-01	4.052540e-02	5.575960e-02
+8.500000e-01	9.000000e-01	4.700252e-01	4.905200e-02	3.816840e-02
+9.000000e-01	9.500000e-01	4.551572e-01	4.207640e-02	5.554660e-02
+9.500000e-01	1.000000e+00	4.610786e-01	3.991160e-02	7.451120e-02
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+ErrorBandColor=purple
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=purple
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H-2-3-25gev-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RatioPlotSameStyle=1
+Title=h(2,3)
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	5.000000e-02	4.097192e-01	0.000000e+00	1.078326e-01
+5.000000e-02	1.000000e-01	4.065166e-01	0.000000e+00	1.059350e-01
+1.000000e-01	1.500000e-01	4.040538e-01	0.000000e+00	1.071408e-01
+1.500000e-01	2.000000e-01	4.009974e-01	0.000000e+00	1.038872e-01
+2.000000e-01	2.500000e-01	3.836220e-01	0.000000e+00	1.049476e-01
+2.500000e-01	3.000000e-01	3.553516e-01	0.000000e+00	1.131660e-01
+3.000000e-01	3.500000e-01	3.354814e-01	0.000000e+00	1.158224e-01
+3.500000e-01	4.000000e-01	3.305638e-01	0.000000e+00	1.233220e-01
+4.000000e-01	4.500000e-01	3.430518e-01	0.000000e+00	1.195500e-01
+4.500000e-01	5.000000e-01	3.538616e-01	0.000000e+00	1.136600e-01
+5.000000e-01	5.500000e-01	3.538442e-01	0.000000e+00	1.127654e-01
+5.500000e-01	6.000000e-01	3.411150e-01	0.000000e+00	1.228050e-01
+6.000000e-01	6.500000e-01	3.330510e-01	0.000000e+00	1.258510e-01
+6.500000e-01	7.000000e-01	3.353094e-01	0.000000e+00	1.255926e-01
+7.000000e-01	7.500000e-01	3.548934e-01	0.000000e+00	1.185224e-01
+7.500000e-01	8.000000e-01	3.836914e-01	0.000000e+00	1.095156e-01
+8.000000e-01	8.500000e-01	4.006238e-01	0.000000e+00	1.087094e-01
+8.500000e-01	9.000000e-01	4.045160e-01	0.000000e+00	1.105570e-01
+9.000000e-01	9.500000e-01	4.058144e-01	0.000000e+00	1.112356e-01
+9.500000e-01	1.000000e+00	4.102884e-01	0.000000e+00	1.088028e-01
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H3Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+ErrorBandColor=red
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=red
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H3Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RatioPlotSameStyle=1
+Title=h(3*) $\oplus$ PS
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	5.000000e-02	4.230142e-01	2.149660e-02	1.481100e-02
+5.000000e-02	1.000000e-01	4.232606e-01	2.719080e-02	9.550600e-03
+1.000000e-01	1.500000e-01	4.199164e-01	2.376580e-02	1.116600e-02
+1.500000e-01	2.000000e-01	4.215732e-01	8.173200e-03	6.375000e-03
+2.000000e-01	2.500000e-01	4.091854e-01	1.540200e-03	1.589200e-02
+2.500000e-01	3.000000e-01	3.861652e-01	2.004320e-02	0.000000e+00
+3.000000e-01	3.500000e-01	3.603108e-01	0.000000e+00	7.183200e-03
+3.500000e-01	4.000000e-01	3.682860e-01	1.395780e-02	2.495900e-02
+4.000000e-01	4.500000e-01	3.695202e-01	1.959700e-02	0.000000e+00
+4.500000e-01	5.000000e-01	3.774550e-01	6.639400e-03	0.000000e+00
+5.000000e-01	5.500000e-01	3.776796e-01	1.279120e-02	0.000000e+00
+5.500000e-01	6.000000e-01	3.753232e-01	1.437160e-02	0.000000e+00
+6.000000e-01	6.500000e-01	3.747854e-01	1.876480e-02	0.000000e+00
+6.500000e-01	7.000000e-01	3.775256e-01	1.685840e-02	5.727600e-03
+7.000000e-01	7.500000e-01	3.743138e-01	3.219800e-03	0.000000e+00
+7.500000e-01	8.000000e-01	4.010104e-01	2.001480e-02	4.421200e-03
+8.000000e-01	8.500000e-01	4.119816e-01	1.766180e-02	1.468820e-02
+8.500000e-01	9.000000e-01	4.158866e-01	1.939020e-02	5.229600e-03
+9.000000e-01	9.500000e-01	4.293340e-01	3.207400e-02	1.944600e-03
+9.500000e-01	1.000000e+00	4.256700e-01	2.119960e-02	6.173800e-03
+# END HISTO1D
+
+
+# BEGIN HISTO1D //homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H2Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+ErrorBandColor=violet
+ErrorBandOpacity=0.3
+ErrorBands=1
+ErrorType=env
+LineColor=violet
+LineStyle=solid
+Path=//homes/tinghua1/Merging-Project/Production/HJETS/ratio-plots/hjets-matched-errorband/H2Jets-NLOPS-combine.yoda/MC_H2JETS_07_LOOSE/j2j3_pullangle
+RatioPlotSameStyle=1
+Title=h(2*) $\oplus$ PS
+# xlow	 xhigh	 val	 errminus	 errplus
+0.000000e+00	5.000000e-02	3.604430e-01	2.878540e-02	3.950960e-02
+5.000000e-02	1.000000e-01	3.568914e-01	2.938460e-02	3.687300e-02
+1.000000e-01	1.500000e-01	3.560660e-01	2.892960e-02	3.910420e-02
+1.500000e-01	2.000000e-01	3.537484e-01	2.919140e-02	3.519640e-02
+2.000000e-01	2.500000e-01	3.386164e-01	3.094020e-02	3.963400e-02
+2.500000e-01	3.000000e-01	3.232602e-01	3.660180e-02	4.229100e-02
+3.000000e-01	3.500000e-01	3.114358e-01	4.115280e-02	4.462860e-02
+3.500000e-01	4.000000e-01	3.074742e-01	4.130400e-02	4.531640e-02
+4.000000e-01	4.500000e-01	3.108972e-01	3.853040e-02	4.313860e-02
+4.500000e-01	5.000000e-01	3.153954e-01	3.256720e-02	4.359680e-02
+5.000000e-01	5.500000e-01	3.160706e-01	3.383500e-02	4.254080e-02
+5.500000e-01	6.000000e-01	3.121230e-01	3.858200e-02	4.315940e-02
+6.000000e-01	6.500000e-01	3.076202e-01	4.203420e-02	4.396620e-02
+6.500000e-01	7.000000e-01	3.090800e-01	4.010160e-02	4.651000e-02
+7.000000e-01	7.500000e-01	3.198638e-01	3.489020e-02	4.508000e-02
+7.500000e-01	8.000000e-01	3.358964e-01	3.202420e-02	4.238520e-02
+8.000000e-01	8.500000e-01	3.472806e-01	2.688980e-02	4.146820e-02
+8.500000e-01	9.000000e-01	3.504334e-01	2.534680e-02	4.126540e-02
+9.000000e-01	9.500000e-01	3.522560e-01	2.848720e-02	4.110380e-02
+9.500000e-01	1.000000e+00	3.548284e-01	2.761180e-02	4.094400e-02
+# END HISTO1D
+
