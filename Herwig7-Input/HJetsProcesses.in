@@ -1,0 +1,43 @@
+# -*- ThePEG-repository -*-
+
+cd /Herwig/MatrixElements/Matchbox/Amplitudes
+mkdir HJets
+cd HJets
+
+create HJets::Amplitudehqqbarkkbar Amplitudehqqbarkkbar
+set Amplitudehqqbarkkbar:ColourBasis /Herwig/MatrixElements/Matchbox/Amplitudes/TraceBasis
+
+create HJets::Amplitudehqqbarkkbarg Amplitudehqqbarkkbarg
+set Amplitudehqqbarkkbarg:ColourBasis /Herwig/MatrixElements/Matchbox/Amplitudes/TraceBasis
+
+create HJets::Amplitudehqqbarkkbargg Amplitudehqqbarkkbargg
+set Amplitudehqqbarkkbargg:ColourBasis /Herwig/MatrixElements/Matchbox/Amplitudes/TraceBasis
+
+create HJets::Amplitudehqqbarkkbarrrbar Amplitudehqqbarkkbarrrbar
+set Amplitudehqqbarkkbarrrbar:ColourBasis /Herwig/MatrixElements/Matchbox/Amplitudes/TraceBasis
+
+insert /Herwig/MatrixElements/Matchbox/Factory:Amplitudes 0 Amplitudehqqbarkkbar
+insert /Herwig/MatrixElements/Matchbox/Factory:Amplitudes 0 Amplitudehqqbarkkbarg
+insert /Herwig/MatrixElements/Matchbox/Factory:Amplitudes 0 Amplitudehqqbarkkbargg
+insert /Herwig/MatrixElements/Matchbox/Factory:Amplitudes 0 Amplitudehqqbarkkbarrrbar
+
+
+insert /Herwig/Merging/MergingFactory:Amplitudes 0 Amplitudehqqbarkkbar
+insert /Herwig/Merging/MergingFactory:Amplitudes 0 Amplitudehqqbarkkbarg
+insert /Herwig/Merging/MergingFactory:Amplitudes 0 Amplitudehqqbarkkbargg
+insert /Herwig/Merging/MergingFactory:Amplitudes 0 Amplitudehqqbarkkbarrrbar
+
+
+insert /Herwig/MatrixElements/Matchbox/Utility/DiagramGenerator:ExcludeVertices 0 /Herwig/Vertices/FFPVertex
+insert /Herwig/MatrixElements/Matchbox/Utility/DiagramGenerator:ExcludeVertices 0 /Herwig/Vertices/FFHVertex
+insert /Herwig/MatrixElements/Matchbox/Utility/DiagramGenerator:ExcludeVertices 0 /Herwig/Vertices/HGGVertex
+
+set /Herwig/MatrixElements/Matchbox/Factory:FixedQEDCouplings Yes
+
+cd /Herwig/Particles
+
+set h0:HardProcessWidth 0*GeV
+do W+:UnsetHardProcessWidth
+do W-:UnsetHardProcessWidth
+do Z0:UnsetHardProcessWidth
+

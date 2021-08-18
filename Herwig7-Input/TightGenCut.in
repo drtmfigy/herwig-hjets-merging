@@ -1,0 +1,19 @@
+insert JetCuts:JetRegions 0 FirstJet
+insert JetCuts:JetRegions 1 SecondJet
+
+set JetFinder:ConeRadius 0.4
+
+set FirstJet:PtMin 10*GeV
+do FirstJet:YRange -5 5
+
+set SecondJet:PtMin 10*GeV
+do SecondJet:YRange -5 5
+
+create ThePEG::JetPairRegion DijetCuts
+set DijetCuts:FirstRegion FirstJet
+set DijetCuts:SecondRegion SecondJet
+set DijetCuts:MassMin 550*GeV
+set DijetCuts:DeltaYMin 4.1
+set DijetCuts:OppositeHemispheres True
+
+insert JetCuts:JetPairRegions 0 DijetCuts
