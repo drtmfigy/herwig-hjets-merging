@@ -1,2 +1,3 @@
 LHC-H-Merging.in is the Herwig 7 input file.
 IncGenCut.in, LooseGenCut.in, TightGenCut.in define the selection cuts.
+Chunk-settings.txt defines how many chunks.
