@@ -291,7 +291,6 @@ namespace Rivet {
           // check if event passes cuts
         //double mjjval = (j1+j2).mass()/GeV;
         double dyjjval= fabs(j1.rapidity()-j2.rapidity());
-        double y_mid = (j1.rapidity()+j2.rapidity())/(2.0);
           // at this stage we should have events with the first and second jets of at least 30GEV
           // resonance veto snippet to follow (is this robust?)
           //
@@ -461,28 +460,19 @@ namespace Rivet {
         _prof_ngapjets_mjj->fill(vars.mjj, vars.ngapjets, weight);
 	      _prof_ngapjets_pt->fill(vars.ptbar,vars.ngapjets,weight);
         }
-        // \Delta R(H,j1), 
         histos["Hj_pT_incl"]             ->fill((hmom+j1).pT()/GeV,e);
         histos["jet1_mass"]              ->fill(j1.mass()/GeV,e);
         histos["jet2_mass"]              ->fill(j2.mass()/GeV,e);
         histos["deltaphi_jj_incl"]       ->fill(deltaPhi(j1,j2),e);
-        histos["deltaR_H_jj_incl"]       ->fill(deltaR(hmom,j1+j2),e);
-        histos["deltaR_H_j1_incl"]       ->fill(deltaR(hmom,j1),e);
-        histos["deltaR_H_j2_incl"]       ->fill(deltaR(hmom,j2),e);
-        histos["deltaR_jj_incl"]         ->fill(deltaR(j1,j2),e);
         histos["deltaphi_Hjj_incl"]      ->fill(deltaPhi(hmom,j1+j2),e);
-        histos["deltaphi_Hj1_incl"]      ->fill(deltaPhi(hmom,j1),e);
-        histos["deltaphi_Hj2_incl"]      ->fill(deltaPhi(hmom,j2),e);
         histos["Hjj_pT_incl"]            ->fill((hmom+j1+j2).pT()/GeV,e);
         // JB 1.5.2019: Is this j1j2_pT, name is misleading (compared to deltay_H_jj)?
         histos["H_jj_pT_incl"]           ->fill((j1+j2).pT()/GeV,e);
         histos["deltay_jj"]              ->fill(dyjjval,e);
-        histos["Hjj_y"]                  ->fill((hmom+j1+j2).rapidity(),e); 
-        histos["deltay_H_j1"]            ->fill(abs(hmom.rapidity()-j1.rapidity()),e);
-        histos["deltay_H_j2"]            ->fill(abs(hmom.rapidity()-j2.rapidity()),e);
+        
         histos["dijet_mass"]             ->fill((j1+j2).mass(),e);
         histos["dijet_mass_fine"]        ->fill((j1+j2).mass(),e);
-        histos["yj1_yj2"]                ->fill(j1.rapidity()*j2.rapidity(),e);
+        histos["yj1_yj2"]                 ->fill(j1.rapidity()*j2.rapidity(),e);
         // there could be two different definitions
         double pull_angle = fabs(CalculatePullAngle(jets[0], jets[1], 0));
         histos["j1j2_pullangle"]->fill(pull_angle / Rivet::PI,e);
@@ -511,7 +501,6 @@ namespace Rivet {
           histos["trijet_mass_fine"]    ->fill((j1+j2+j3).mass(),e);
           histos["H_jjj_pT_incl"]       ->fill((j1+j2+j3).pT()/GeV,e);
           histos["jet3_pT_incl"]        ->fill(j3.pT()/GeV,e);
-          histos["deltay_H_j3"]         ->fill(abs(hmom.rapidity()-j3.rapidity()),e);
             // use y* definition here instead of rap() only
             //define z_j3 use the definition in HXWSG paper
           double z_j3=(j3.rapidity()-(j1.rapidity()+j2.rapidity())/(2.0))/dyjjval;
@@ -522,10 +511,7 @@ namespace Rivet {
            //if z_j3 is large, x_j3 is negative
           if (fabs(z_j3)>0.5) x_j3 *=-1;
           histos["jet3_x"]		        ->fill(x_j3,e);
-          // add y_star variable
-          double y_j3_star = j3.rapidity()-y_mid;
-          histos["jet3_y_star"]           ->fill(y_j3_star,e);
-
+          
 	        double pull_angle13 = fabs(CalculatePullAngle(jets[0], jets[2], 0));
           histos["j1j3_pullangle"]->fill(pull_angle13 / Rivet::PI,e);
 
@@ -575,8 +561,6 @@ namespace Rivet {
             // use y* definition here instead of rap() only
           double z_j4= (j4.rapidity()-(j1.rapidity()+j2.rapidity())/(2.0))/dyjjval;
           histos["jet4_y"]             ->fill(z_j4,e);
-          double y_j4_star = j4.rapidity()-y_mid;
-          histos["jet4_y_star"]           ->fill(y_j4_star,e);
           // min function is needed
 	  // xj4=min(fabs(j1.rap-j4.rap),fabs(j2.rap-j4.rap))
 	  double x_j4=min(fabs(j1.rapidity()-j4.rapidity()),fabs(j2.rapidity()-j4.rapidity()));
@@ -592,18 +576,8 @@ namespace Rivet {
         HT_all=HT_jets+hmom.Et();
         histos["HT_jets"]->fill(HT_jets,e);
         histos["HT_all"]->fill(HT_all,e);
-        // Scalar transverse momentum sum
-        double HT_jets_central(0.), HT_jets_mid(0.);
-        for(size_t i(0);i<jets.size();i++){
-          if (jets[i].rapidity()>=-0.5 && jets[i].rapidity()<=0.5){
-            HT_jets_central += abs(jets[i].momentum().pT());
-          }
-          if ((jets[i].rapidity()-y_mid)>=-0.5 && (jets[i].rapidity()-y_mid)<=0.5){
-             HT_jets_mid += abs(jets[i].momentum().pT());
-          }
-        }        
-        histos["HT_jets_central"]->fill(HT_jets_central,e);
-        histos["HT_jets_mid"]->fill(HT_jets_mid,e);
+
+        
         
       //}
       
@@ -721,8 +695,6 @@ namespace Rivet {
       histos["jet2_y_incl"] = bookNLOHisto1D("jet2_y_incl",50,-5.0,5.0);
       histos["jet3_y_incl"] = bookNLOHisto1D("jet3_y_incl",50,-5.0,5.0);
       histos["jet4_y_incl"] = bookNLOHisto1D("jet4_y_incl",50,-5.0,5.0);
-      histos["jet3_y_star"] = bookNLOHisto1D("jet3_y_star",50,-5.0,5.0);
-      histos["jet4_y_star"] = bookNLOHisto1D("jet4_y_star",50,-5.0,5.0);
       histos["jet1_y_abs_incl"] = bookNLOHisto1D("jet1_y_abs_incl",50,0,8.0);
       histos["jet2_y_abs_incl"] = bookNLOHisto1D("jet2_y_abs_incl",50,0,8.0);
       
@@ -734,16 +706,14 @@ namespace Rivet {
         // inclusive Higgs and jet rapidities
       histos["H_y"] = bookNLOHisto1D("H_y",25,-5,5);
       histos["H_y_abs"] = bookNLOHisto1D("H_y_abs",50,0.0,8.0);
-      histos["Hjj_y"] = bookNLOHisto1D("Hjj_y",80,-8.0,8.0);
+      
       histos["jet3_y"] = bookNLOHisto1D("jet3_y",25,-5,5);
       histos["jet4_y"] = bookNLOHisto1D("jet4_y",25,-5,5);
       histos["jet3_x"] = bookNLOHisto1D("jet3_x",25,-5,5);
       histos["jet4_x"] = bookNLOHisto1D("jet4_x",25,-5,5);  
-        // \Delta y(jj), \Delta y(H,j1),\Delta y(H,j2),\Delta y(H,j3)
+
+        // \Delta y(jj)
       histos["deltay_jj"] = bookNLOHisto1D("deltay_jj",50,0,10);
-      histos["deltay_H_j1"] = bookNLOHisto1D("deltay_H_j1",50,0,10);
-      histos["deltay_H_j2"] = bookNLOHisto1D("deltay_H_j2",50,0,10);
-      histos["deltay_H_j3"] = bookNLOHisto1D("deltay_H_j3",50,0,10);
         // Jet pull angle (J1,J2) 
       histos["j1j2_pullangle"] = bookNLOHisto1D("j1j2_pullangle",20,0,1);
        // Jet pull angle (J1,J3)
@@ -803,20 +773,14 @@ namespace Rivet {
         // m(Hjj)
       histos["H_dijet_mass"]= bookNLOHisto1D("H_dijet_mass",50,0,1000);
       
-        // \Delta\phi(H,jj) incl. and excl. \Delta\phi(H,j1), \Delta\phi(H,j2)
+        // \Delta\phi(H,jj) incl. and excl.
       histos["deltaphi_jj_incl"] = bookNLOHisto1D("deltaphi_jj_incl",30,0.0,PI);
       histos["deltaphi_jj_excl"] = bookNLOHisto1D("deltaphi_jj_excl",30,0.0,PI);
       histos["deltaphi_Hjj_incl"] = bookNLOHisto1D("deltaphi_Hjj_incl",30,0.0,PI);
       histos["deltaphi_Hjj_excl"] = bookNLOHisto1D("deltaphi_Hjj_excl",30,0.0,PI);
-      histos["deltaphi_Hj1_incl"] = bookNLOHisto1D("deltaphi_Hj1_incl",30,0.0,PI);
-      histos["deltaphi_Hj2_incl"] = bookNLOHisto1D("deltaphi_Hj2_incl",30,0.0,PI);
       // incl.
       histos["deltaphi2"] = bookNLOHisto1D("deltaphi2",30,0.0,PI);
-      // \Delta R
-      histos["deltaR_H_jj_incl"] = bookNLOHisto1D("deltaR_H_jj_incl",40,0.0,8);
-      histos["deltaR_H_j1_incl"] = bookNLOHisto1D("deltaR_H_j1_incl",40,0.0,8);
-      histos["deltaR_H_j2_incl"] = bookNLOHisto1D("deltaR_H_j2_incl",40,0.0,8);
-      histos["deltaR_jj_incl"] = bookNLOHisto1D("deltaR_jj_incl",40,0.0,8);
+      
         // \Delta y(H,jj)
       histos["deltay_H_jj"] = bookNLOHisto1D("deltay_H_jj",25,0,8);
       
@@ -824,8 +788,7 @@ namespace Rivet {
       histos["HT_all"] = bookNLOHisto1D("HT_all",150,0,6000);
       histos["HT_jets"] = bookNLOHisto1D("HT_jets",150,0,6000);
       histos["HT_gapjets"] = bookNLOHisto1D("HT_gapjets",100,0,1000);
-      histos["HT_jets_central"] = bookNLOHisto1D("HT_jets_central",150,0,6000);
-      histos["HT_jets_mid"] = bookNLOHisto1D("HT_jets_mid",150,0,6000);
+
       // add jet splittings (Is 4 jets enought?)
 
       const double sqrts = sqrtS() ? sqrtS() : 14000.*GeV;
